@@ -1,4 +1,4 @@
-message(STATUS "Loading tests-crypto module...")
+message(STATUS "Loading tests-crypto app...")
 
 if (NOT CONFIGURED_ONCE)
 	set(APP_TESTS_CRYPTO_SOURCE_DIR ${APP_TESTS_CRYPTO_DIR}/src)
