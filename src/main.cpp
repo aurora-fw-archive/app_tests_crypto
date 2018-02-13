@@ -26,8 +26,8 @@ Application *MyApp;
 
 afwslot slot_MyApp_on_open()
 {
-	afwbyte_t k[32] = {0x1a, 0xaa};
-	afwbyte_t c[16] = {0xa1, 0x11};
+	byte_t k[32] = {0x1a, 0xaa};
+	byte_t c[16] = {0xa1, 0x11};
 	CLI::Output << c << CLI::EndLine;
 	CLI::Output << AES::encrypt(k, 128, c) << CLI::EndLine;
 	CLI::Output << AES::decrypt(k, 128, AES::encrypt(k, 128, c)) << CLI::EndLine;
