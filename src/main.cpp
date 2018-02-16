@@ -24,7 +24,7 @@ using namespace AuroraFW;
 
 Application *MyApp;
 
-afwslot slot_MyApp_on_open()
+afwslot slot_MyApp_on_open(Application* )
 {
 	byte_t k[32] = {0x1a, 0xaa};
 	byte_t c[16] = {0xa1, 0x11};
@@ -36,6 +36,6 @@ afwslot slot_MyApp_on_open()
 
 int main(int argc, char * argv[])
 {
-	MyApp = new Application(slot_MyApp_on_open, argc, argv);
+	MyApp = new Application(argc, argv, slot_MyApp_on_open);
 	return 0;
 }
