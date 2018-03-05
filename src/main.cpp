@@ -24,7 +24,7 @@ using namespace AuroraFW;
 
 Application *MyApp;
 
-afwslot slot_MyApp_on_open(Application* )
+void slot_MyApp_on_open(Application* )
 {
 	byte_t k[32] = {0x1a, 0xaa};
 	byte_t c[16] = {0xa1, 0x11};
